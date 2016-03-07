@@ -108,12 +108,33 @@
             {% endif %}
             -->
             
-            <li id="nav_people">
-              <a href="{% url "profile_browse" %}">{% trans "Users" %}</a>
+			<li id="nav_information" class="dropdown">
+              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Information Pages" %} <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+			    {% get_flatpages as flatpages %}
+				{% for page in flatpages %}
+                {% if page.url != "/pages/about/" %}
+                {% if page.url != "/pages/projects/" %}
+                {% if page.url != "/pages/tools/" %}
+                {% if page.url != "/pages/help/" %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+			  </ul>
             </li>
-            <li id="nav_groups">
-              <a href="{% url "group_list" %}">{% trans "Groups" %}</a>
+			
+			
+            <li id="nav_people" class="dropdown">
+              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Users" %} <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+			  <li><a href="{% url "profile_browse" %}">{% trans "Users" %}</a></li>
+			  <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
+			  </ul>
             </li>
+            
             <!--
             <li id="nav_blog">
               <a href="{% url "zinnia:entry_archive_index" %}">{% trans "Blog" %}</a>
@@ -231,7 +252,7 @@
                 <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
                 <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
                 <li><a href="{% url "zinnia:entry_archive_index" %}">{% trans "Blog" %}</a></li>
-                -->
+                
             {% for page in flatpages %}
                 {% if page.url != "/pages/about/" %}
                 {% if page.url != "/pages/projects/" %}
@@ -242,7 +263,7 @@
                 {% endif %}
                 {% endif %}
                 {% endif %}
-            {% endfor %}
+            {% endfor %} -->
             </ul>
           </div>
           <!-- 20151016 hide language switcher and fill its space with flatpages

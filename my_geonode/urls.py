@@ -20,4 +20,7 @@ urlpatterns = patterns('',
     # django extended flatpages app
     url(r'^pages/', include('django.contrib.flatpages.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    # django helpdesk
+    url(r'helpdesk/', include('helpdesk.urls')),
+
  ) + urlpatterns
