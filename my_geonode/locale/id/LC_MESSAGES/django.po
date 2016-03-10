@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-15 15:32+0700\n"
+"POT-Creation-Date: 2016-03-10 12:04+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:63 templates/base.html.py:226
+#: templates/base.html:63 templates/base.html.py:247
 msgid "About"
 msgstr ""
 
@@ -75,127 +75,131 @@ msgid "Tools"
 msgstr ""
 
 #: templates/base.html:112
+msgid "Information Pages"
+msgstr "Halaman Informasi"
+
+#: templates/base.html:131 templates/base.html.py:133
 msgid "Users"
 msgstr "Pengguna"
 
-#: templates/base.html:115 templates/base.html.py:232
+#: templates/base.html:134 templates/base.html.py:253
 msgid "Groups"
 msgstr "Grup"
 
-#: templates/base.html:119 templates/base.html.py:233
+#: templates/base.html:140 templates/base.html.py:254
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:136
+#: templates/base.html:157
 msgid "Advanced Search"
 msgstr "Pencarian Lanjutan"
 
-#: templates/base.html:141 templates/site_index.html:34
+#: templates/base.html:162 templates/site_index.html:34
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:154 templates/base.html.py:295
+#: templates/base.html:175 templates/base.html.py:318
 msgid "Sign in"
 msgstr ""
 
-#: templates/base.html:162 templates/base.html.py:332
+#: templates/base.html:183 templates/base.html.py:355
 msgid "Help"
 msgstr ""
 
-#: templates/base.html:214 templates/base.html.py:224
+#: templates/base.html:235 templates/base.html.py:245
 msgid "Powered by"
 msgstr "Ditenagai oleh"
 
-#: templates/base.html:214 templates/base.html.py:224
+#: templates/base.html:235 templates/base.html.py:245
 msgid "GeoNode"
 msgstr ""
 
-#: templates/base.html:216
+#: templates/base.html:237
 msgid "Developed by"
 msgstr "Dikembangkan oleh"
 
-#: templates/base.html:216
+#: templates/base.html:237
 msgid "Supported by"
 msgstr "Didukung oleh"
 
-#: templates/base.html:224
+#: templates/base.html:245
 msgid "version"
 msgstr ""
 
-#: templates/base.html:225
+#: templates/base.html:246
 msgid "Developers"
 msgstr ""
 
-#: templates/base.html:231
+#: templates/base.html:252
 msgid "People"
 msgstr ""
 
-#: templates/base.html:249
+#: templates/base.html:271
 msgid "Language"
 msgstr ""
 
-#: templates/base.html:283 templates/base.html.py:284
+#: templates/base.html:306 templates/base.html.py:307
 msgid "Username"
 msgstr ""
 
-#: templates/base.html:287
+#: templates/base.html:310
 msgid "Password"
 msgstr ""
 
-#: templates/base.html:291
+#: templates/base.html:314
 msgid "Remember Me"
 msgstr ""
 
-#: templates/base.html:307
+#: templates/base.html:330
 msgid "Profile Menu"
 msgstr ""
 
-#: templates/base.html:311
+#: templates/base.html:334
 msgid "Upload Layers"
 msgstr ""
 
-#: templates/base.html:313
+#: templates/base.html:336
 msgid "Profile"
 msgstr ""
 
-#: templates/base.html:314
+#: templates/base.html:337
 msgid "Recent Activity"
 msgstr ""
 
-#: templates/base.html:315
+#: templates/base.html:338
 msgid "Inbox"
 msgstr ""
 
-#: templates/base.html:317
+#: templates/base.html:340
 msgid "Notifications"
 msgstr ""
 
-#: templates/base.html:320
+#: templates/base.html:343
 msgid "Announcements"
 msgstr ""
 
-#: templates/base.html:323
+#: templates/base.html:346
 msgid "Remote Services"
 msgstr ""
 
-#: templates/base.html:324
+#: templates/base.html:347
 msgid "Invite User"
 msgstr ""
 
-#: templates/base.html:326
+#: templates/base.html:349
 msgid "GeoServer"
 msgstr ""
 
-#: templates/base.html:329
+#: templates/base.html:352
 msgid "Admin"
 msgstr ""
 
-#: templates/base.html:338 templates/zinnia/base.html:104
+#: templates/base.html:361 templates/zinnia/base.html:104
 #: templates/zinnia/base.html.py:105
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:376
+#: templates/base.html:399
 msgid "Type your search here ..."
 msgstr ""
 
@@ -393,3 +397,15 @@ msgstr ""
 
 #~ msgid "%(the_page.title)s"
 #~ msgstr "Tentang"
+
+#: documents/templates/documents/document_detail.html:146
+#: documents/templates/documents/document_detail.html:170
+#: layers/templates/layers/layer_detail.html:194
+#: layers/templates/layers/layer_detail.html:279
+#: layers/templates/layers/layer_detail.html:306
+#: maps/templates/maps/map_detail.html:90
+#: maps/templates/maps/map_detail.html:133
+#: templates/_bulk_permissions_form.html:19
+msgid "Close"
+msgstr "Tutup"
+
