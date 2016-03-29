@@ -1,10 +1,10 @@
-{% load i18n avatar_tags flatpages %}
-<!DOCTYPE html>
+{% load i18n avatar_tags flatpages %} 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
     {% block head %}
       {% if DEBUG_STATIC %}
@@ -50,113 +50,6 @@
           <a class="navbar-brand" href="{% url "home" %}">GeoNode</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul id="nav-main" class="nav navbar-nav">
-            {% block tabs %}
-            <li>
-              <a href="{% url "home" %}">{% trans "Home" %}</a>
-            </li>
-            
-            {% get_flatpages '/pages/about/' as page_exists %}
-            {% if page_exists %}
-            {% with page_exists|first as the_page %}
-            <li>
-              <a href="{{ the_page.url }}">{% trans "About" %}</a>
-            </li>
-            {% endwith %}
-            {% endif %}
-            
-            <li id="nav_layers">
-              <a href="{% url "layer_browse" %}">{% trans "Spatial Data" %}</a>
-            </li>
-            <!--
-            <li id="nav_layers">
-              <a href="{% url "layer_browse" %}">{% trans "Layers" %}</a>
-            </li>
-            -->
-            <li id="nav_maps">
-              <a href="{% url "maps_browse" %}">{% trans "Maps" %}</a>
-            </li>
-            <li id="nav_documents" class="dropdown">
-              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Documents" %} <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="{% url "document_browse" %}">{% trans "All Documents" %}</a></li>
-                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=Regulation">{% trans "Regulation" %}</a></li>
-                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=Text%20Documents">{% trans "Text Documents" %}</a></li>
-                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=Tabular%20Data">{% trans "Tabular Data" %}</a></li>
-                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=Pictures">{% trans "Pictures" %}</a></li>
-                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=Static%20Maps">{% trans "Static Maps" %}</a></li>
-              </ul>
-            </li>
-            
-            <!-- 20150921 replace with Users + Groups
-            {% get_flatpages '/pages/projects/' as page_exists %}
-            {% if page_exists %}
-            {% with page_exists|first as the_page %}
-            <li>
-              <a href="{{ the_page.url }}">{% trans "Projects" %}</a>
-            </li>
-            {% endwith %}
-            {% endif %}
-            
-            {% get_flatpages '/pages/tools/' as page_exists %}
-            {% if page_exists %}
-            {% with page_exists|first as the_page %}
-            <li>
-              <a href="{{ the_page.url }}">{% trans "Tools" %}</a>
-            </li>
-            {% endwith %}
-            {% endif %}
-            -->
-            
-			<li id="nav_information" class="dropdown">
-              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Information Pages" %} <span class="caret"></span></a>
-			  <ul class="dropdown-menu">
-			    {% get_flatpages as flatpages %}
-				{% for page in flatpages %}
-                {% if page.url != "/pages/about/" %}
-                {% if page.url != "/pages/projects/" %}
-                {% if page.url != "/pages/tools/" %}
-                {% if page.url != "/pages/help/" %}
-                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endif %}
-                {% endif %}
-                {% endif %}
-                {% endif %}
-            {% endfor %}
-			  </ul>
-            </li>
-			
-			
-            <li id="nav_people" class="dropdown">
-              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Users" %} <span class="caret"></span></a>
-			  <ul class="dropdown-menu">
-			  <li><a href="{% url "profile_browse" %}">{% trans "Users" %}</a></li>
-			  <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
-			  </ul>
-            </li>
-            
-            <!--
-            <li id="nav_blog">
-              <a href="{% url "zinnia:entry_archive_index" %}">{% trans "Blog" %}</a>
-            </li>
-            -->
-            {% endblock %}
-          </ul>
-          <form class="navbar-form" id="search" action="{% url "search" %}" >
-            <div class="col-md-4">
-              <div class="input-group">
-                {% if HAYSTACK_SEARCH %}
-                <input id="search_input" type="text" placeholder="Search" class="form-control" name="q">
-                {% else %}
-                <input id="search_input" type="text" placeholder="Search" class="form-control" name="title__icontains">
-                {% endif %}
-                <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
-                </span>
-              </div>
-              <p id="advanced-search" class="text-right"><a href="{% url "search" %}">{% trans "Advanced Search" %}</a></p>
-            </div>
-          </form>
           <ul class="nav navbar-nav navbar-right">
             {% if not user.is_authenticated and REGISTRATION_OPEN %}
             <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
@@ -172,7 +65,7 @@
             {% else %}
             <li>
               <a href="#" data-toggle="modal" data-target="#SigninModal" role="button" >
-                {% trans "Sign in" %} 
+                {% trans "Sign in" %}
               </a>
             </li>
             {% endif %}
@@ -185,8 +78,65 @@
             {% endwith %}
             {% endif %}
           </ul>
+		  
+			<div class="col-md-10 right">
+			  <form class="navbar-right" id="search" action="{% url "search" %}" >
+				<div class="input-group">
+                {% if HAYSTACK_SEARCH %}
+                <input id="search_input" type="text" placeholder="Search" class="form-control" name="q">
+                {% else %}
+                <input id="search_input" type="text" placeholder="Search" class="form-control" name="title__icontains">
+                {% endif %}
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                </span>
+				</div>
+				<p id="advanced-search" class="text-right"><a href="{% url "search" %}">{% trans "Advanced Search" %}</a></p>
+			  </form>
+
+		  <ul id="nav-main" class="nav navbar-nav">
+            {% block tabs %}
+			<li id="nav_maps"><a href="{% url "maps_browse" %}">{% trans "Maps" %}</a></li>
+            <li id="nav_data" class="dropdown">
+              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Data" %} <span class="caret"></span></a>
+              
+			  <ul class="dropdown-menu">
+				<li id="nav_layers"><a href="{% url "layer_browse" %}">{% trans "Spatial Data" %}</a></li>
+				<li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
+			  </ul> 
+			  
+            </li>
+			<li id="nav_information" class="dropdown">
+              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Information" %} <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+			    {% get_flatpages as flatpages %}
+				{% for page in flatpages %}
+                {% if page.url != "/pages/about/" %}
+                {% if page.url != "/pages/projects/" %}
+                {% if page.url != "/pages/tools/" %}
+                {% if page.url != "/pages/help/" %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+			  </ul>
+            </li>
+			{% get_flatpages '/pages/about/' as page_exists %}
+            {% if page_exists %}
+            {% with page_exists|first as the_page %}
+            <li>
+              <a href="{{ the_page.url }}">{% trans "About" %}</a>
+            </li>
+            {% endwith %}
+            {% endif %}
+            {% endblock %}
+          </ul>
+
+		</div>
         </div><!--/.nav-collapse -->
-      </div>
+      
       <div id="lang-switcher">
         <form action="/i18n/setlang/" method="post">
           {% csrf_token %}
@@ -204,12 +154,10 @@
     </div>
 
   <div id="wrap">
+
     {% block middle %}
     <div class="container">
-      {% include "_status_message.html" %}
-      {% include "_announcements.html" %}
-      {% include "_messages.html" %}
-      {% block body_outer %}
+	  {% block body_outer %}
       <div class="row">
         <div class="col-md-8">
         {% block body %}{% endblock %}
@@ -219,77 +167,69 @@
         </div>
       </div>
       {% endblock %}
+
     </div>
     {% endblock middle %}
   </div>
     
     {% block footer %}
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div id="footer-logo">
-              <img src="{{ STATIC_URL }}img/logo_INSTANT_small.jpg" alt="INSTANT">
-            </div>
-            <div id="footer-credits">
-              {% trans "Powered by" %} <a href="http://geonode.org" target="_blank">{% trans "GeoNode" %}</a>
-              <br>
-              {% trans "Developed by" %} <a href="http://worldagroforestry.org/lama-i" target="_blank">LAMA-I Project</a> | {% trans "Supported by" %} <a href="http://www.esp3.org/index.php/en/" target="_blank">DANIDA</a>
-              <!--
-              GeoNode customization by seno@geo.co.id
-              -->
-            </div>
-          </div>
-          <div class="col-md-8">
-            <!--
-            {% trans "Powered by" %} <a href="http://geonode.org">{% trans "GeoNode" %}</a> <em>{% trans "version" %} {{ VERSION }}</em> |
-            <a href="{% url "developer" %}">{% trans "Developers" %}</a> |
-            <a href="{% url "about" %}">{% trans "About" %}</a>
-            -->
-            {% get_flatpages as flatpages %}
-            <ul id="flatpages">
-                <!-- 20150921 move to top navbar
-                <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
-                <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
-                <li><a href="{% url "zinnia:entry_archive_index" %}">{% trans "Blog" %}</a></li>
-                
-            {% for page in flatpages %}
-                {% if page.url != "/pages/about/" %}
-                {% if page.url != "/pages/projects/" %}
-                {% if page.url != "/pages/tools/" %}
-                {% if page.url != "/pages/help/" %}
-                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endif %}
-                {% endif %}
-                {% endif %}
-                {% endif %}
-            {% endfor %} -->
-            </ul>
-          </div>
-          <!-- 20151016 hide language switcher and fill its space with flatpages
-          <div class="col-md-4">
-            <label class="hidden">{% trans "Language" %}</label>
-            {% if csrf_token != "NOTPROVIDED" %}
-            {% get_current_language as LANGUAGE %}
-            <form class="form-inline" action="/i18n/setlang/" method="post">
-            {% csrf_token %}
-              <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
-                {% for lang in LANGUAGES %}
-                <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                  {{ lang.1 }}
-                </option>
-                {% endfor %}
-              </select>
-            </form>
-            {% endif %}
-          </div>
-          -->
-        </div>
+<!-- FOOTER -->
+<div id="footer">
+  <div id="footer-wrapper">
+    <ul id="follow">
+      <li>
+        <p>Follow us: </p>
+      </li>
+      <li><a href="#"><img src="/static/img/twitter.png" alt="" /></a></li>
+      <li><a href="#"><img src="/static/img/facebook.png" alt="" /></a></li>
+      <li><a href="#"><img src="/static/img/linkedln.png" alt="" /></a></li>
+      <li><a href="#"><img src="/static/img/rss.png" alt="" /></a></li>
+    </ul>
+    <div class="footer-cols">
+      <div>
+	  <h4 class="footer-heading">{% trans "Tentang Simbangda" %}</h4>
+		<div class="footer-text">
+		<p>Simbangda Kabupaten Banyuasin adalah portal data resmi milik Pemerintah Kabupaten Banyuasin. Portal data ini berisi data-data pembangunan daerah Banyuasin yang diharapkan bermanfaat untuk masyarakat luas.</p>
+		<p>SIMBANGDA Banyuasin dikembangkan bekerjasama dengan kegiatan <a href="http://worldagroforestry.org/lama-i" target="_blank">LAMA I</a> yang didukung oleh <a href="http://www.esp3.org/index.php/en/" target="_blank">DANIDA</a> </p>
+		</div>
+	  </div>
+      <div>
+      <h4 class="footer-heading">{% trans "Kebijakan" %}</h4>
+		<div class="footer-text">
+		<p><a href="#"><i class="fa fa-hand-o-right"></i> Tata aturan penggunaan data</a></p>
+		<p><a href="#"><i class="fa fa-hand-o-right"></i> Penggunaan Data Spasial</a></p>
+		<p><a href="#"><i class="fa fa-hand-o-right"></i> Penggunaan Data Dokumen dan Tabular</a></p>
+		</div>
+		</div>
+      <div>
+      <h4 class="footer-heading">{% trans "Data Simbangda" %}</h4>
+		<div class="footer-text">
+		<p><a href="/layers/"> Data Spasial</a></p>
+		<p><a href="/documents/"> Dokumen</a></p>
+		<p><a href="/maps/"> MAPS</a></p>
+		<p><a href="#"> Informasi</a></p>		
+		</div>
       </div>
-    </footer>
+      <div>
+	  <h4 class="footer-heading">{% trans "Hubungi Kami" %}</h4>
+		<div class="footer-text">
+		<h4>Dishubkominfo Kabupaten Banyuasin</h4>
+		<p>Komplek Perkantoran Pemkab Banyuasin No.21 Sekojo Pangkalan Balai </p>
+        <i class='fa fa-phone-square'  title='Telp'></i> (0711) 7690021<br />
+		<i class='fa fa-envelope-o' title='Email'></i> <a href="mailto:simbangda.admin@banyuasinkab.go.id">simbangda.admin@banyuasinkab.go.id</a><br />
+		</div>
+	  </div>
+    </div>
+<!-- Copy right 
+    <div class="footer-bottom">
+      <p class="legal">&copy; Copyright 2016 <a href="http://worldagroforestry.org/lama-i">LAMA-I Project</a> All Rights Reserved | Supported by <a href="http://www.esp3.org/index.php/en/">DANIDA</a> | Website Template By <a target="_blank" href="http://worldagroforestry.org/region/southeast_asia">ICRAF Southeast Asia</a></a></p>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- ENDS FOOTER -->
     {% endblock footer %}
-
-
     <!-- Modal must stay outside the navbar -->
     {% if not user.is_authenticated %}
     <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -366,7 +306,7 @@
     </div>
     {% endif %}
     <!-- End of Modal -->
-    
+     
     {% if DEBUG_STATIC %}
     <script src="{{ STATIC_URL }}lib/js/jquery.min.js"></script>
     <script src="{{ STATIC_URL }}lib/js/jquery.dataTables.js"></script>
@@ -381,6 +321,13 @@
     <script src="{{ STATIC_URL }}lib/js/json2.js"></script>
     <script src="{{ STATIC_URL }}lib/js/select2.js"></script>
     <script src="{{ STATIC_URL }}lib/js/waypoints.js"></script>
+	<!-- Cufon -->
+	<script src="{{ STATIC_URL }}lib/js/cufon-yui.js" type="text/javascript"></script>
+	<script src="{{ STATIC_URL }}lib/js/bebas_400.font.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	Cufon.replace('.custom', { fontFamily: 'bebas', hover: true });
+	</script>
+	<!-- /Cufon -->
     {% else %}
     <script src="{{ STATIC_URL }}lib/js/assets.min.js"></script>
     {% endif %}
@@ -423,6 +370,4 @@
         };
     </script>
     <script type="text/javascript" src="{% url "lang" %}"></script>
-
-  </body>
-</html>
+  </body> </html>

@@ -1,12 +1,60 @@
 {% extends 'site_index.html' %}
 {% load i18n %}
 {% block mainbody %}
-  {% if recent_content %}
+
+<div class="container">
+<h3 class="heading">{% trans "Informasi Kabupaten Banyuasin" %}</h3>
+	<div class="col-md-6">
+		<div class="informasi-box">
+				<h3><a href="/pages/disdukcapil/"><i class="fa fa-street-view fa-3x"></i>Kependudukan</a></h3>
+				<p>Informasi mengenai data-data kependudukan Kabupaten Banyuasin, sebaran penduduk dan Mata Pencaharian</p>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="informasi-box">
+			
+			<h3><a href="/pages/emisi/"><i class="fa fa-leaf fa-3x"></i>Status Emisi Gas Rumah Kaca</a></h3>
+			<p>Informasi mengenai status besaran dan sumber emisi gas rumah kaca</p>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="informasi-box">
+			
+			<h3><a href="#"><i class="fa fa-tree fa-3x"></i>Rencana Aksi Mitigasi Gas Rumah Kaca</a></h3>
+			<p>Informasi mengenai rencana kegiatan untuk menurunkan emisi/meningkatkan penyerapan gas rumah kaca dari berbagai sumber emisi </p>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="informasi-box">
+			
+			<h3><a href="/pages/bappeda/"><i class="fa fa-map-o fa-3x"></i>Rencana Pola Ruang </a></h3>
+			<p>Informasi mengenai rencana pola ruang, yang berisi lokasi kawasan kegiatan sosial, ekonomi, budaya dan kawasan-kawasan lainnya di dalam kawasan budidaya dan  kawasan lindung</p>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="informasi-box">
+			
+			<h3><a href="/pages/puciptakarya/"><i class="fa fa-home fa-3x"></i>Infrastruktur Permukiman</a></h3>
+			<p>Informasi mengenai infrastruktur pemukiman dan akses pada air bersih</p>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="informasi-box">
+			
+			<h3><a href="#"><i class="fa fa-spinner fa-3x"></i>Informasi lainnya</a></h3>
+			<p>Informasi-informasi lain mengenai Kabupaten Banyuasin</p>
+		</div>
+	</div>
+</div>
+<div class="mb-30"></div>
+
   <div class="container">
-    <div id="recent-content" class="row">
-      <h3 class="heading">{% trans "Recent Layers" %}</h3>
+<h3 class="heading">{% trans "Data Kabupaten Banyuasin" %}</h3>
+  {% if recent_content %}
+
+	<h4 class="subheading">{% trans "Data Spasial Terbaru" %}</h4>
       {% for content in recent_content %}
-        <div class="col-md-3">
+        <div class="row col-md-3">
           <div class="recent-box">
             <div class="text-center">
               <a href="{{ content.detail_url }}" title="{{ content.name|escape }}">
@@ -20,9 +68,295 @@
           </div>
         </div>
       {% endfor %}
-      </div>
+      
     </div>
   {% endif %}
+<div class="mb-30"></div>
+  
+<div class="container">
+<h4 class="subheading">{% trans "Data Kategori" %}</h4>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0">
+				<img src="/uploaded/thumbs/books-1204038_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Semua Kategori</h3>
+					<h3>+</h3>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>	
+	
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=biota">
+				<img src="/uploaded/thumbs/butterfly-734654_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>BIOTA</h3>
+					<p>Flora dan fauna di alam bebas, serta ekosistem alami </p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=boundaries">
+				<img src="/uploaded/thumbs/fencing-20133_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Batas Wilayah</h3>
+					<p>Deskripsi batas wilayah/lahan</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=climatologyMeteorologyAtmosphere">
+				<img src="/uploaded/thumbs/blue-821110_960_720.jpg " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Klimatologi Meteorologi Atmosfer</h3>
+					<p>Proses-proses dan fenomena yang terjadi di atmosfer</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=economy">
+				<img src="/uploaded/thumbs/coins-948603_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Ekonomi</h3>
+					<p>Kegiatan ekonomi, kondisi, dan pekerjaan, pengelolaan kehutanan, pertambangan, minyak dan gas bumi</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=elevation">
+				<img src="/uploaded/thumbs/elevation-841255_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Ketinggian</h3>
+					<p>Ketinggian di atas maupun di bawah permukaan laut </p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=environment">
+				<img src="/uploaded/thumbs/Biogradska_suma.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Lingkungan</h3>
+					<p>Sumberdaya lingkungan, perlindungan, dan konservasi</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=farming">
+				<img src="/uploaded/thumbs/KerbauJawa.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Pertanian</h3>
+					<p>Pertanian dan peternakan yang dibudidayakan</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=geoscientificInformation">
+				<img src="/uploaded/thumbs/South_Sulawesi-Indonesia-Mountains.jpg " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Informasi Geoscience</h3>
+					<p>informasi mengenai ilmu bumi</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=health">
+				<img src="/uploaded/thumbs/medical-563427_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Kesehatan</h3>
+					<p>Kesehatan, pelayanan kesehatan, ekologi manusia, dan keamanan</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=imageryBaseMapsEarthCover">
+				<img src="/uploaded/thumbs/Pioneer_10-11_spacecraft.jpg " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Citra Satelit Dasar Penutup Bumi</h3>
+					<p>Citra satelit dan peta-peta dasar yang meliput permukaan bumi</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=intelligenceMilitary">
+				<img src="/uploaded/thumbs/Pasukan_tni_ad_sebagai_pasukan_45_pada_saat_pengibaran_bendera_duplikat_pusaka_HUT_RI.jpg " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Militer</h3>
+					<p>Basis, struktur dan aktivitas berkaitan dengan militer</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=inlandWaters">
+				<img src="/uploaded/thumbs/Lake_Toba,_North_Sumatera_(13).JPG " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Perairan Darat</h3>
+					<p>Perairan darat, sistem drainase dan karakteristiknya</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=location">
+				<img src="/uploaded/thumbs/1280px-Ampera_Bridge_at_Noon,_Palembang.jpg " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Referensi Lokasi</h3>
+					<p>Informasi posisi </p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=oceans">
+				<img src="/uploaded/thumbs/fish-1073419_960_720.jpg " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Oseanografi</h3>
+					<p>Bentuk dan karakteristik laut (kelautan)</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=planningCadastre">
+				<img src="/uploaded/thumbs/model-1221566_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Pertanahan dan Perencanaan</h3>
+					<p>Informasi mengenai aktivitas yang terkait dengan pertanahan dan perencanaan pembangunan sumberdaya lahan </p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=society">
+				<img src="/uploaded/thumbs/Indonesia_Museum_Traditional_Dress_02.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Social Budaya</h3>
+					<p>Karakteristik masyarakat dan budaya</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=structure">
+				<img src="/uploaded/thumbs/building-212526_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Struktur Bangunan</h3>
+					<p>Konstruksi buatan manusia</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=transportation">
+				<img src="/uploaded/thumbs/padang-1137104_960_720.jpg " alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Transportasi</h3>
+					<p>Transportasi darat, laut dan udara</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumb-informasi">
+			<a href="/layers/?limit=100&offset=0&category__identifier__in=utilitiesCommunication">
+				<img src="/uploaded/thumbs/antenna-498438_960_720.jpg" alt="thumbnail" width="100%" height="100%">
+				<div class="quotehover">
+					<div class="text-hover">
+					<h3>Infrastructure dan Telekomunikasi</h3>
+					<p>Energi,listrik, sumberdaya air, dan infrastruktur dan pelayanan komunikasi</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>	
+	
+</div>	
 {% endblock %}
 
 {% block carousel %}
