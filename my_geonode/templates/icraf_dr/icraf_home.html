@@ -1,7 +1,31 @@
 {% extends 'site_index.html' %}
-{% load i18n %}
+{% load i18n flatpages %} 
 {% block mainbody %}
 
+<div class="container">
+
+<h3 class="heading">{% trans "Informasi Kabupaten Banyuasin" %}</h3>
+
+			    {% get_flatpages as flatpages %}
+				{% for page in flatpages %}
+                {% if page.url != "/pages/about/" %}
+                {% if page.url != "/pages/projects/" %}
+                {% if page.url != "/pages/tools/" %}
+                {% if page.url != "/pages/help/" %}
+                <div class="col-md-6">
+					<div class="informasi-box"><h4 class="capitalize"><a href="{{ page.url }}"><i class="fa fa-hand-o-right fa-3x"></i>{{ page.title }}</a></h4>
+					</div>
+				</div>
+				{% endif %}
+                {% endif %}
+                {% endif %}
+                {% endif %}
+				{% endfor %}
+
+</div>
+<div class="mb-30"></div>
+
+<!--
 <div class="container">
 <h3 class="heading">{% trans "Informasi Kabupaten Banyuasin" %}</h3>
 	<div class="col-md-6">
@@ -47,7 +71,7 @@
 	</div>
 </div>
 <div class="mb-30"></div>
-
+-->
   <div class="container">
 <h3 class="heading">{% trans "Data Kabupaten Banyuasin" %}</h3>
   {% if recent_content %}

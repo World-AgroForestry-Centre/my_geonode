@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-29 10:19+0700\n"
+"POT-Creation-Date: 2016-04-05 16:46+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,7 +56,7 @@ msgstr "Dokumen"
 
 #: templates/base.html:110
 msgid "Information"
-msgstr "Informasi"
+msgstr ""
 
 #: templates/base.html:130 templates/baseORI.html:142
 #: templates/baseORI.html.py:250
@@ -90,7 +90,7 @@ msgstr ""
 
 #: templates/base.html:254 templates/baseORI.html:315
 msgid "Remember Me"
-msgstr ""
+msgstr "Ingat Saya"
 
 #: templates/base.html:270 templates/baseORI.html:331
 msgid "Profile Menu"
@@ -98,7 +98,7 @@ msgstr ""
 
 #: templates/base.html:274 templates/baseORI.html:335
 msgid "Upload Layers"
-msgstr ""
+msgstr "Unggah Data Spasial"
 
 #: templates/base.html:276 templates/baseORI.html:337
 msgid "Profile"
@@ -139,11 +139,11 @@ msgstr ""
 #: templates/base.html:301 templates/baseORI.html:362
 #: templates/zinnia/base.html:104 templates/zinnia/base.html.py:105
 msgid "Log out"
-msgstr ""
+msgstr "Keluar"
 
 #: templates/base.html:346 templates/baseORI.html:400
 msgid "Type your search here ..."
-msgstr ""
+msgstr "Ketik pencarian anda disini"
 
 #: templates/baseORI.html:57
 msgid "Home"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: templates/baseORI.html:238 templates/baseORI.html.py:248
 msgid "Powered by"
-msgstr "Ditenagai oleh"
+msgstr ""
 
 #: templates/baseORI.html:238 templates/baseORI.html.py:248
 msgid "GeoNode"
@@ -211,11 +211,11 @@ msgstr ""
 
 #: templates/baseORI.html:240
 msgid "Developed by"
-msgstr "Dikembangkan oleh"
+msgstr ""
 
 #: templates/baseORI.html:240
 msgid "Supported by"
-msgstr "Didukung oleh"
+msgstr ""
 
 #: templates/baseORI.html:248
 msgid "version"
@@ -235,12 +235,12 @@ msgstr ""
 
 #: templates/index.html:6 templates/zinnia/base.html:28
 msgid "Welcome!"
-msgstr ""
+msgstr "Selamat Datang"
 
 #: templates/index.html:15 templates/site_index.html:24
 #: templates/site_index.html.py:112
 msgid "Welcome"
-msgstr ""
+msgstr "Selamat Datang"
 
 #: templates/index.html:16 templates/site_index.html:30
 #: templates/site_index.html.py:113
@@ -258,7 +258,7 @@ msgstr ""
 #: templates/index.html:18 templates/site_index.html:32
 #: templates/site_index.html.py:115
 msgid "Need help?"
-msgstr ""
+msgstr "Butuh bantuan?"
 
 #: templates/index.html:18 templates/site_index.html:32
 #: templates/site_index.html.py:115
@@ -273,8 +273,8 @@ msgstr "0"
 #: templates/index.html:31 templates/site_index.html:88
 msgid "Layer"
 msgid_plural "Layers"
-msgstr[0] "Layer"
-msgstr[1] "Layer"
+msgstr[0] "Data Spasial"
+msgstr[1] "Data Spasial"
 
 #: templates/index.html:33
 msgid ""
@@ -284,7 +284,7 @@ msgstr ""
 
 #: templates/index.html:35 templates/site_index.html:51
 msgid "Explore Layers"
-msgstr ""
+msgstr "Telusuri Data Spasial"
 
 #: templates/index.html:41 templates/site_index.html:91
 msgid "Map"
@@ -300,7 +300,7 @@ msgstr ""
 
 #: templates/index.html:45 templates/site_index.html:66
 msgid "Create maps"
-msgstr ""
+msgstr "Buat peta"
 
 #: templates/index.html:52 templates/site_index.html:97
 msgid "User"
@@ -349,21 +349,22 @@ msgstr "Download data dalam format standar."
 msgid "0"
 msgstr ""
 
-#: templates/icraf_dr/icraf_home.html:6
+#: templates/icraf_dr/icraf_home.html:7 templates/icraf_dr/icraf_home.html:30
 msgid "Informasi Kabupaten Banyuasin"
 msgstr ""
 
-#: templates/icraf_dr/icraf_home.html:52
+#: templates/icraf_dr/icraf_home.html:76
 msgid "Data Kabupaten Banyuasin"
 msgstr ""
 
-#: templates/icraf_dr/icraf_home.html:55
+#: templates/icraf_dr/icraf_home.html:79
 msgid "Data Spasial Terbaru"
 msgstr ""
 
-#: templates/icraf_dr/icraf_home.html:77
-msgid "Data Kategori"
-msgstr ""
+#: templates/icraf_dr/icraf_home.html:101
+#, fuzzy
+msgid "Kategori Data"
+msgstr "Data Spasial"
 
 #: templates/zinnia/base.html:16
 msgid "RSS Feed of latest entries"
@@ -433,7 +434,7 @@ msgid "Post an entry"
 msgstr ""
 
 #~ msgid "Recent Layers"
-#~ msgstr "Layer terbaru"
+#~ msgstr "Data Spasial terbaru"
 
 #~ msgid "Other"
 #~ msgstr "Lainnya"
@@ -443,3 +444,6 @@ msgstr ""
 
 #~ msgid "Close"
 #~ msgstr "Tutup"
+
+#~ msgid "Farming"
+#~ msgstr "Pertanian"

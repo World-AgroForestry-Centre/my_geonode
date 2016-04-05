@@ -421,8 +421,11 @@ body.data #category_form .control-label {
 
 /* facet ribbon */
 #facet-ribbon {
-    border-bottom: 1px solid #ccc;
+    background: #777264 none repeat scroll 0 0;
+/*    border-bottom: 1px solid #ccc; */
     margin-bottom: 30px;
+	margin-top: -2px;
+    text-transform: uppercase;
 }
 #facet-ribbon .col-md-3 {
     border-right: 1px solid #ccc;
@@ -446,12 +449,12 @@ body.data #category_form .control-label {
     line-height: 20px;
 }
 #facet-ribbon a {
-    color: #777;
+    color: #fff;
     text-decoration: none;
     padding: 10px 15px;
 }
 #facet-ribbon a:hover {
-    color: #333;
+    color: cyan;
 }
 
 /* smaller activity thumb to accomodate documents */
@@ -731,4 +734,7 @@ form#search {
 
 .right {
 	margin-right: -10px;
+}
+h4.capitalize {
+    text-transform: capitalize;
 }
