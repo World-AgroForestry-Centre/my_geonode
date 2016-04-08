@@ -56,7 +56,7 @@ msgstr "Dokumen"
 
 #: templates/base.html:110
 msgid "Information"
-msgstr ""
+msgstr "Informasi"
 
 #: templates/base.html:130 templates/baseORI.html:142
 #: templates/baseORI.html.py:250
