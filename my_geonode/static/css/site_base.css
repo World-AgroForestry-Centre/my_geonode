@@ -24,6 +24,13 @@ body {
 	width:auto;
 }
 
+.navbar-header {
+	width:200px;
+}
+
+.menu-right {
+	float:right;
+}
 
 /*
 .navbar-fixed-top, .navbar-fixed-bottom {
@@ -44,6 +51,10 @@ body {
 .navbar-nav > li {
 	min-width:80px;
 	float: right;
+}
+
+ul.navbar-nav {
+	padding:0 15px;
 }
 
 .navbar-toggle {
@@ -159,7 +170,7 @@ body {
 
 form#search {
     margin-top: 0;
-    margin-right: -20px;
+
 }
 
 /* advanced search link */
