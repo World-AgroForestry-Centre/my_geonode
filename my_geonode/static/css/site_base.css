@@ -63,7 +63,8 @@ ul.navbar-nav {
 
 .navbar-brand {
     background: url(../img/logo.png) no-repeat;
-    width: 160px;
+    width: 100%;
+	max-width: 200px;
     height: 90px;
     margin-right: 0;
     padding-right: 160px;
