@@ -106,6 +106,7 @@
 			  </ul> 
 			  
             </li>
+			<!-- Disable Menu Flatpage or information 
 			<li id="nav_information" class="dropdown">
               <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Information" %} <span class="caret"></span></a>
 			  <ul class="dropdown-menu">
@@ -123,12 +124,15 @@
 				{% endfor %}
 			  </ul>
             </li>
+			-->
+			<li id="nav_blog"><a href="/blog">{% trans "Blog/News" %}</a></li>
 			{% get_flatpages '/pages/about/' as page_exists %}
             {% if page_exists %}
             {% with page_exists|first as the_page %}
             <li>
               <a href="{{ the_page.url }}">{% trans "About" %}</a>
             </li>
+			<li id="nav_home"><a href="{% url "home" %}">{% trans "Home" %}</a></li>
             {% endwith %}
             {% endif %}
             {% endblock %}

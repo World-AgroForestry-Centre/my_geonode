@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 16:46+0700\n"
+"POT-Creation-Date: 2017-02-24 15:25+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:68 templates/base.html.py:258
+#: templates/base.html:68 templates/base.html.py:262
 #: templates/baseORI.html:178 templates/baseORI.html.py:319
 msgid "Sign in"
 msgstr ""
 
-#: templates/base.html:76 templates/base.html.py:295
+#: templates/base.html:76 templates/base.html.py:299
 #: templates/baseORI.html:186 templates/baseORI.html.py:356
 msgid "Help"
 msgstr ""
@@ -54,100 +54,104 @@ msgstr "Data Spasial"
 msgid "Documents"
 msgstr "Dokumen"
 
-#: templates/base.html:110
+#: templates/base.html:111
 msgid "Information"
 msgstr "Informasi"
 
-#: templates/base.html:130 templates/baseORI.html:142
+#: templates/base.html:128
+msgid "Blog/News"
+msgstr ""
+
+#: templates/base.html:133 templates/baseORI.html:142
 #: templates/baseORI.html.py:250
 msgid "About"
 msgstr ""
 
-#: templates/base.html:190
+#: templates/base.html:135 templates/baseORI.html:57
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:194
 msgid "Tentang Simbangda"
 msgstr ""
 
-#: templates/base.html:197
+#: templates/base.html:201
 msgid "Kebijakan"
 msgstr ""
 
-#: templates/base.html:205
+#: templates/base.html:209
 msgid "Data Simbangda"
 msgstr ""
 
-#: templates/base.html:214
+#: templates/base.html:218
 msgid "Hubungi Kami"
 msgstr ""
 
-#: templates/base.html:246 templates/base.html.py:247
+#: templates/base.html:250 templates/base.html.py:251
 #: templates/baseORI.html:307 templates/baseORI.html.py:308
 msgid "Username"
 msgstr ""
 
-#: templates/base.html:250 templates/baseORI.html:311
+#: templates/base.html:254 templates/baseORI.html:311
 msgid "Password"
 msgstr ""
 
-#: templates/base.html:254 templates/baseORI.html:315
+#: templates/base.html:258 templates/baseORI.html:315
 msgid "Remember Me"
 msgstr "Ingat Saya"
 
-#: templates/base.html:270 templates/baseORI.html:331
+#: templates/base.html:274 templates/baseORI.html:331
 msgid "Profile Menu"
 msgstr ""
 
-#: templates/base.html:274 templates/baseORI.html:335
+#: templates/base.html:278 templates/baseORI.html:335
 msgid "Upload Layers"
 msgstr "Unggah Data Spasial"
 
-#: templates/base.html:276 templates/baseORI.html:337
+#: templates/base.html:280 templates/baseORI.html:337
 msgid "Profile"
 msgstr ""
 
-#: templates/base.html:277 templates/baseORI.html:338
+#: templates/base.html:281 templates/baseORI.html:338
 msgid "Recent Activity"
 msgstr ""
 
-#: templates/base.html:278 templates/baseORI.html:339
+#: templates/base.html:282 templates/baseORI.html:339
 msgid "Inbox"
 msgstr ""
 
-#: templates/base.html:280 templates/baseORI.html:341
+#: templates/base.html:284 templates/baseORI.html:341
 msgid "Notifications"
 msgstr ""
 
-#: templates/base.html:283 templates/baseORI.html:344
+#: templates/base.html:287 templates/baseORI.html:344
 msgid "Announcements"
 msgstr ""
 
-#: templates/base.html:286 templates/baseORI.html:347
+#: templates/base.html:290 templates/baseORI.html:347
 msgid "Remote Services"
 msgstr ""
 
-#: templates/base.html:287 templates/baseORI.html:348
+#: templates/base.html:291 templates/baseORI.html:348
 msgid "Invite User"
 msgstr ""
 
-#: templates/base.html:289 templates/baseORI.html:350
+#: templates/base.html:293 templates/baseORI.html:350
 msgid "GeoServer"
 msgstr ""
 
-#: templates/base.html:292 templates/baseORI.html:353
+#: templates/base.html:296 templates/baseORI.html:353
 msgid "Admin"
 msgstr ""
 
-#: templates/base.html:301 templates/baseORI.html:362
+#: templates/base.html:305 templates/baseORI.html:362
 #: templates/zinnia/base.html:104 templates/zinnia/base.html.py:105
 msgid "Log out"
 msgstr "Keluar"
 
-#: templates/base.html:346 templates/baseORI.html:400
+#: templates/base.html:350 templates/baseORI.html:400
 msgid "Type your search here ..."
 msgstr "Ketik pencarian anda disini"
-
-#: templates/baseORI.html:57
-msgid "Home"
-msgstr ""
 
 #: templates/baseORI.html:64 templates/site_index.html:47
 msgid "Layers"
@@ -159,7 +163,7 @@ msgstr "Semua Dokumen"
 
 #: templates/baseORI.html:74
 msgid "Regulation"
-msgstr "Produk Hukum"
+msgstr "Peraturan"
 
 #: templates/baseORI.html:75
 msgid "Text Documents"
@@ -167,7 +171,7 @@ msgstr "Dokumen Teks"
 
 #: templates/baseORI.html:76
 msgid "Tabular Data"
-msgstr "Data Tabular"
+msgstr "Data Tabel"
 
 #: templates/baseORI.html:77
 msgid "Pictures"
@@ -350,11 +354,11 @@ msgid "0"
 msgstr ""
 
 #: templates/icraf_dr/icraf_home.html:7 templates/icraf_dr/icraf_home.html:30
-msgid "Informasi Kabupaten Banyuasin"
+msgid "Informasi Kabupaten Jayapura"
 msgstr ""
 
 #: templates/icraf_dr/icraf_home.html:76
-msgid "Data Kabupaten Banyuasin"
+msgid "Data Kabupaten Jayapura"
 msgstr ""
 
 #: templates/icraf_dr/icraf_home.html:79
