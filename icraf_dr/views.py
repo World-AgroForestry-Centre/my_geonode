@@ -7,6 +7,7 @@ from icraf_dr.models import Category, Coverage, Source, Year, Main, Slider
 
 from guardian.shortcuts import get_objects_for_user
 from geonode.layers.models import Layer
+from geonode.maps.models import Map
 
 def icraf_home(request, template='icraf_dr/icraf_home.html'):
     """ custom home views handler
@@ -16,12 +17,13 @@ def icraf_home(request, template='icraf_dr/icraf_home.html'):
             request.user, 'base.view_resourcebase').values('id')
     layers = Layer.objects.filter(is_published=True)
     layers = layers.filter(id__in=authorized).order_by('-id')[:4]
-    
+    map_layers = Map.objects.distinct().order_by('-date')[:4]
     sliders = Slider.objects.filter(is_published=True).order_by('position')
     
     context_dict = {
         'recent_content': layers,
         'sliders': sliders,
+		'recent_maps':map_layers,
     }
     
     return render_to_response(template, RequestContext(request, context_dict))
